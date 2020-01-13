@@ -24,7 +24,7 @@ class SeriesController extends Controller
     {
 
       $serie = Serie::create($request->all());
-      $request->session()->flash('mensagem', "Série {$serie->id} criada com sucesso! {$serie->nome}");
+      $request->session()->flash('mensagem', "Série: {$serie->nome} criada com sucesso!");
 
         return redirect()->route('listar_series');
     }
